@@ -1,0 +1,182 @@
+{
+  "info": {
+    "_postman_id": "9f59b550-03a3-47e4-a45d-da20806e4716",
+    "name": "TODO",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "register user",
+      "_postman_id": "26dd41cf-6ce5-4d7f-a97c-f18fe10313ff",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"email\": \"bob.smith@gmail.com\",\n\"password\": \"ab47sr6c8x9znz\",\n\"name\": \"Bob Samuel\",\n\"phone\": \"012345678902\"\n}\n\n\n"
+        },
+        "url": "{{host}}/user/register"
+      },
+      "response": []
+    },
+    {
+      "name": "user login ",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "70a11c68-d201-4fe8-972b-f1f292c4793a",
+            "exec": [
+              "const jsonData = pm.response.json();",
+              "",
+              "pm.environment.set(\"token\", jsonData.payload.token);",
+              "",
+              "pm.environment.set(\"userId\", jsonData.payload.user._id);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "3bdf4e75-a821-4ef1-b5c4-0ea9de455d19",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\n\"email\": \"bob.smith@gmail.com\",\n\"password\": \"ab47sr6c8x9znz\"\n\n}"
+        },
+        "url": "{{host}}/user/login"
+      },
+      "response": []
+    },
+    {
+      "name": "validate token",
+      "_postman_id": "321b47fb-257c-4b22-9d19-d38de4c138c9",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": "{{host}}/user/token"
+      },
+      "response": []
+    },
+    {
+      "name": "get all",
+      "_postman_id": "0b875141-1071-4e03-8451-d511620da16d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "url": "{{host}}/user"
+      },
+      "response": []
+    },
+    {
+      "name": "get by Id",
+      "_postman_id": "35937599-4f9c-487c-a436-b2d7c573f05d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "url": "{{host}}/user/{{userId}}"
+      },
+      "response": []
+    },
+    {
+      "name": "patch by Id",
+      "_postman_id": "1eb99b03-99c7-47d4-b2e2-dc79fd6c9320",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"email\": \"bob.samuel@gmail.com\",\n\"password\": \"ab47sr6c8x9znz\",\n\"name\": \"Bob Samuel\",\n\"phone\": \"012345678902\"\n}"
+        },
+        "url": "{{host}}/user/{{userId}}"
+      },
+      "response": []
+    },
+    {
+      "name": "delete user",
+      "_postman_id": "cd2184e4-fa86-4bb3-bd3d-e56089b80395",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "url": "{{host}}/user/{{userId}}"
+      },
+      "response": []
+    }
+  ]
+}
