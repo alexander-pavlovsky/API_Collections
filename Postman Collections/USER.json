@@ -1,0 +1,103 @@
+{
+  "info": {
+    "_postman_id": "be2de78b-91b1-4d78-a384-ecb5d1ecbf1e",
+    "name": "USER",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "c6ed0b20-86a9-43c0-80bf-f1dc1ef454cc",
+            "exec": [
+              "const jsonData = pm.response.json();",
+              "",
+              "pm.environment.set(\"token\", jsonData.token);",
+              "",
+              "",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "da365f98-60e1-476d-8060-ea79e5a10670",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"email\": \"sps.com@yahoo.com\",\n\"password\": \"2166\"\n}"
+        },
+        "url": "{{host}}/user/login"
+      },
+      "response": []
+    },
+    {
+      "name": "register",
+      "_postman_id": "3d24589f-6042-413d-8850-2945ec2b1956",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n \"email\": \"sps.com@yahoo.com\",\n \"password\": \"2166\",\n \"phone\": \"+15082715667\",\n \"name\": \"Pavel Smoljaninov\"\n}"
+        },
+        "url": "{{host}}/user"
+      },
+      "response": []
+    },
+    {
+      "name": "User Token Validation",
+      "_postman_id": "1bcef324-0712-4fd8-ab89-388447f97685",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": "{{host}}/user/token"
+      },
+      "response": []
+    }
+  ]
+}
