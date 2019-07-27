@@ -70,46 +70,6 @@
       "response": []
     },
     {
-      "name": "post token",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "id": "70a11c68-d201-4fe8-972b-f1f292c4793a",
-            "exec": [
-              "const jsonData = pm.response.json();",
-              "",
-              "pm.environment.set(\"token\", jsonData.payload.token);",
-              "",
-              "pm.environment.set(\"userId\", jsonData.payload.user._id);"
-            ],
-            "type": "text/javascript"
-          }
-        }
-      ],
-      "_postman_id": "71775bd1-f1c5-41f6-9ec2-d17daacb6bbc",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n\n\"email\": \"bob.smith@gmail.com\",\n\"password\": \"ab47sr6c8x9znz\"\n\n}"
-        },
-        "url": "{{host}}/user/login"
-      },
-      "response": []
-    },
-    {
       "name": "validate token",
       "_postman_id": "321b47fb-257c-4b22-9d19-d38de4c138c9",
       "protocolProfileBehavior": {
@@ -200,6 +160,51 @@
       "response": []
     },
     {
+      "name": "post token",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "70a11c68-d201-4fe8-972b-f1f292c4793a",
+            "exec": [
+              "const jsonData = pm.response.json();",
+              "",
+              "pm.environment.set(\"token\", jsonData.payload.token);",
+              "",
+              "pm.environment.set(\"userId\", jsonData.payload.user._id);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "71775bd1-f1c5-41f6-9ec2-d17daacb6bbc",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\n\"email\": \"bob.smith@gmail.com\",\n\"password\": \"ab47sr6c8x9znz\"\n\n}"
+        },
+        "url": "{{host}}/user/token"
+      },
+      "response": []
+    },
+    {
       "name": "delete user",
       "_postman_id": "cd2184e4-fa86-4bb3-bd3d-e56089b80395",
       "protocolProfileBehavior": {
@@ -215,6 +220,51 @@
           }
         ],
         "url": "{{host}}/user/{{userId}}"
+      },
+      "response": []
+    },
+    {
+      "name": "post token Copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "70a11c68-d201-4fe8-972b-f1f292c4793a",
+            "exec": [
+              "const jsonData = pm.response.json();",
+              "",
+              "pm.environment.set(\"token\", jsonData.payload.token);",
+              "",
+              "pm.environment.set(\"userId\", jsonData.payload.user._id);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "1b21338b-38df-4545-8a41-805ed29dbdf5",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\n\"email\": \"bob.smith@gmail.com\",\n\"password\": \"ab47sr6c8x9znz\"\n\n}"
+        },
+        "url": "{{host}}/user/token"
       },
       "response": []
     }
