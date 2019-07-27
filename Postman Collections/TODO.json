@@ -29,7 +29,23 @@
               "",
               "pm.test(\"Message is string\", () => {",
               "    pm.expect(jsonData.message).to.be.a(\"string\");",
-              "});"
+              "});",
+              "",
+              "pm.test(\"Response time is less than 5000ms\", function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(5000);",
+              "});",
+              "",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "c53d4b2f-3188-4084-835d-56cffd92c48a",
+            "exec": [
+              "pm.environment.set(\"userEmail\", \"bob.smith@gmail.com\");"
             ],
             "type": "text/javascript"
           }
