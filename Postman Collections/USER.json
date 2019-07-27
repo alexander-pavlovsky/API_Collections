@@ -6,6 +6,30 @@
   },
   "item": [
     {
+      "name": "register",
+      "_postman_id": "3d24589f-6042-413d-8850-2945ec2b1956",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n \"email\": \"sps.com@yahoo.com\",\n \"password\": \"2166\",\n \"phone\": \"+15082715667\",\n \"name\": \"Pavel Smoljaninov\"\n}"
+        },
+        "url": "{{host}}/user"
+      },
+      "response": []
+    },
+    {
       "name": "Login",
       "event": [
         {
@@ -43,30 +67,6 @@
           "raw": "{\n\"email\": \"sps.com@yahoo.com\",\n\"password\": \"2166\"\n}"
         },
         "url": "{{host}}/user/login"
-      },
-      "response": []
-    },
-    {
-      "name": "register",
-      "_postman_id": "3d24589f-6042-413d-8850-2945ec2b1956",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n \"email\": \"sps.com@yahoo.com\",\n \"password\": \"2166\",\n \"phone\": \"+15082715667\",\n \"name\": \"Pavel Smoljaninov\"\n}"
-        },
-        "url": "{{host}}/user"
       },
       "response": []
     },
