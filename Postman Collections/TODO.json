@@ -25,7 +25,11 @@
               "",
               "/*pm.test(\"Fail is false\", () => {",
               "    pm.expect(jsonData.fail).to.eql(false);",
-              "}); */"
+              "}); */",
+              "",
+              "pm.test(\"Message is string\", () => {",
+              "    pm.expect(jsonData.message).to.bea(\"string\");",
+              "});"
             ],
             "type": "text/javascript"
           }
