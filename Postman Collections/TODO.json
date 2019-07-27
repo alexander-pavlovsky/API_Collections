@@ -28,7 +28,7 @@
               "}); */",
               "",
               "pm.test(\"Message is string\", () => {",
-              "    pm.expect(jsonData.message).to.be(\"string\");",
+              "    pm.expect(jsonData.message).to.be.a(\"string\");",
               "});"
             ],
             "type": "text/javascript"
