@@ -205,25 +205,6 @@
       "response": []
     },
     {
-      "name": "delete user",
-      "_postman_id": "cd2184e4-fa86-4bb3-bd3d-e56089b80395",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "DELETE",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "{{token}}",
-            "type": "text"
-          }
-        ],
-        "url": "{{host}}/user/{{userId}}"
-      },
-      "response": []
-    },
-    {
       "name": "post token Copy",
       "event": [
         {
@@ -265,6 +246,25 @@
           "raw": "{\n\n\"email\": \"bob.smith@gmail.com\",\n\"password\": \"ab47sr6c8x9znz\"\n\n}"
         },
         "url": "{{host}}/user/token"
+      },
+      "response": []
+    },
+    {
+      "name": "delete user",
+      "_postman_id": "cd2184e4-fa86-4bb3-bd3d-e56089b80395",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "url": "{{host}}/user/{{userId}}"
       },
       "response": []
     }
