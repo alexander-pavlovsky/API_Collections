@@ -17,7 +17,15 @@
               "",
               "pm.test(\"Status\", function() {",
               "    pm.response.to.have.status(201);",
-              "});"
+              "});",
+              "",
+              "pm.test(\"Success is true\", () => {",
+              "    pm.expect(jsonData.success).to.equal(true);",
+              "});",
+              "",
+              "/*pm.test(\"Fail is false\", () => {",
+              "    pm.expect(jsonData.fail).to.eql(false);",
+              "}); */"
             ],
             "type": "text/javascript"
           }
