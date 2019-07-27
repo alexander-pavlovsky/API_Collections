@@ -45,7 +45,7 @@
           "script": {
             "id": "c53d4b2f-3188-4084-835d-56cffd92c48a",
             "exec": [
-              "pm.environment.set(\"userEmail\", \"bob.smith@gmail.com\");",
+              "pm.environment.set(\"userEmail\", \"bob.smith\"+ new Date().getTime() + \"@gmail.com\");",
               "pm.environment.set(\"userPassword\", \"ab47sr6c8x9znz\");"
             ],
             "type": "text/javascript"
@@ -198,7 +198,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n\"email\": \"bob.samuel@gmail.com\",\n\"password\": \"ab47sr6c8x9znz\",\n\"name\": \"Bob Samuel\",\n\"phone\": \"012345678902\"\n}"
+          "raw": "{\n\"email\": \"{{userEmail}}\",\n\"password\": \"{{userPassword}}\",\n\"name\": \"Bob Samuel\",\n\"phone\": \"012345678902\"\n}"
         },
         "url": "{{host}}/user/{{userId}}"
       },
