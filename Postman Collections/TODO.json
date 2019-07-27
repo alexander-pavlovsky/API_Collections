@@ -13,12 +13,7 @@
           "script": {
             "id": "2ce3d81d-7848-4055-8d49-6b00bcf90b27",
             "exec": [
-              "const jsonData = pm.response.json();",
-              "",
-              "pm.test(\"Status\", function() {",
-              "    pm.response.to.have.status(201);",
-              "    ",
-              "});"
+              ""
             ],
             "type": "text/javascript"
           }
