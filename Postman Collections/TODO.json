@@ -108,7 +108,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n\n\"email\": \"bob.smith@gmail.com\",\n\"password\": \"ab47sr6c8x9znz\"\n\n}"
+          "raw": "{\n\n\"email\": \"{{userEmail}}\",\n\"password\": \"{{userPassword}}\"\n\n}"
         },
         "url": "{{host}}/user/login"
       },
