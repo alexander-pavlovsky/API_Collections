@@ -115,12 +115,7 @@
               "    pm.expect(pm.response.responseTime).to.be.below(5000);",
               "});",
               "",
-              "email: {",
-              "     type: String,",
-              "     required: true,",
-              "     unique: true,",
-              "     match: /[a-z0-9!#$%&\u2018*+/=?^_{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,",
-              "   },",
+              "",
               "",
               ""
             ],
