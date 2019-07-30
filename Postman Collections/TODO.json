@@ -198,6 +198,37 @@
     },
     {
       "name": "get all",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "23b0cf6f-43f9-4cbb-82cf-8dc762cffbd0",
+            "exec": [
+              "const jsonData = pm.response.json();",
+              "",
+              "pm.test(\"Status\", function() {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test(\"Success is true\", () => {",
+              "    pm.expect(jsonData.success).to.equal(true);",
+              "});",
+              "",
+              "",
+              "pm.test(\"Message is string\", () => {",
+              "    pm.expect(jsonData.message).to.be.a(\"string\");",
+              "});",
+              "",
+              "pm.test(\"Response time is less than 5000ms\", function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(5000);",
+              "});",
+              "",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "_postman_id": "0b875141-1071-4e03-8451-d511620da16d",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
