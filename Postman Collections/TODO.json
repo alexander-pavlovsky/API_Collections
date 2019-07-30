@@ -115,7 +115,7 @@
               "",
               "pm.test('Contain numbers', () => {",
               "    for (let i = 0; i < jsonData.payload.user_id.length; i++) {",
-              "        pm.expect(jsonData.payload.user_id[i]).to.not.be.a(\"number\");",
+              "        pm.expect(jsonData.payload.user_id[i]).to.not.be.a(number);",
               "    }",
               "});\u2029",
               "",
