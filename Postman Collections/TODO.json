@@ -248,6 +248,37 @@
     },
     {
       "name": "get by Id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "bb410d7a-5778-45a3-96fa-b9785a465306",
+            "exec": [
+              "const jsonData = pm.response.json();",
+              "",
+              "pm.test(\"Status\", function() {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test(\"Success is true\", () => {",
+              "    pm.expect(jsonData.success).to.equal(true);",
+              "});",
+              "",
+              "",
+              "pm.test(\"Message is string\", () => {",
+              "    pm.expect(jsonData.message).to.be.a(\"string\");",
+              "});",
+              "",
+              "pm.test(\"Response time is less than 5000ms\", function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(5000);",
+              "});",
+              "",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "_postman_id": "35937599-4f9c-487c-a436-b2d7c573f05d",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
