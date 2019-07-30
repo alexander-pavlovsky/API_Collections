@@ -35,7 +35,8 @@
               "    pm.expect(pm.response.responseTime).to.be.below(5000);",
               "});",
               "",
-              ""
+              "pm.test(\"Returns 24 char alphanumeric id\", () => {pm.expect(jsonData.payload).to.match(/^[a-z0-9A-Z]{24}$/);\u2028    ",
+              "});"
             ],
             "type": "text/javascript"
           }
@@ -352,6 +353,36 @@
     },
     {
       "name": "delete user",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "41c4fb70-0423-49fd-ad31-ddc4d3250ae5",
+            "exec": [
+              "const jsonData = pm.response.json();",
+              "",
+              "pm.test(\"Status\", function() {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test(\"Success is true\", () => {",
+              "    pm.expect(jsonData.success).to.equal(true);",
+              "});",
+              "",
+              "pm.test(\"Message is string\", () => {",
+              "    pm.expect(jsonData.message).to.be.a(\"string\");",
+              "});",
+              "",
+              "pm.test(\"Response time is less than 5000ms\", function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(5000);",
+              "});",
+              "",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "_postman_id": "cd2184e4-fa86-4bb3-bd3d-e56089b80395",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
