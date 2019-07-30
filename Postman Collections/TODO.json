@@ -138,6 +138,37 @@
     },
     {
       "name": "validate token",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "25ba41ba-760a-48b5-b0ed-cf421a6fd90d",
+            "exec": [
+              "const jsonData = pm.response.json();",
+              "",
+              "pm.test(\"Status\", function() {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test(\"Success is true\", () => {",
+              "    pm.expect(jsonData.success).to.equal(true);",
+              "});",
+              "",
+              "",
+              "pm.test(\"Message is string\", () => {",
+              "    pm.expect(jsonData.message).to.be.a(\"string\");",
+              "});",
+              "",
+              "pm.test(\"Response time is less than 5000ms\", function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(5000);",
+              "});",
+              "",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "_postman_id": "321b47fb-257c-4b22-9d19-d38de4c138c9",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
