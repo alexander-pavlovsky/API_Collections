@@ -298,6 +298,37 @@
     },
     {
       "name": "patch by Id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "b97f70a5-9c46-4c26-8510-7d5be7897b77",
+            "exec": [
+              "const jsonData = pm.response.json();",
+              "",
+              "pm.test(\"Status\", function() {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test(\"Success is true\", () => {",
+              "    pm.expect(jsonData.success).to.equal(true);",
+              "});",
+              "",
+              "",
+              "pm.test(\"Message is string\", () => {",
+              "    pm.expect(jsonData.message).to.be.a(\"string\");",
+              "});",
+              "",
+              "pm.test(\"Response time is less than 5000ms\", function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(5000);",
+              "});",
+              "",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "_postman_id": "1eb99b03-99c7-47d4-b2e2-dc79fd6c9320",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
