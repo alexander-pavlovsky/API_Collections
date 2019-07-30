@@ -36,7 +36,11 @@
               "});",
               "",
               "pm.test(\"Returns 24 char alphanumeric id\", () => {pm.expect(jsonData.payload).to.match(/^[a-z0-Z]{24}$/);\u2028    ",
-              "});"
+              "});",
+              "",
+              "",
+              "",
+              ""
             ],
             "type": "text/javascript"
           }
