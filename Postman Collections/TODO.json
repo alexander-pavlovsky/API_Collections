@@ -428,7 +428,7 @@
           "mode": "raw",
           "raw": "{\n\"name\": \"Max Jobs\",\n\"owner\": \"max001\",\n\"location\": \"Boston\"\n}\n"
         },
-        "url": ""
+        "url": "{{host}}/group"
       },
       "response": []
     }
