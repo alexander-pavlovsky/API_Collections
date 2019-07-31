@@ -407,6 +407,19 @@
         "url": "{{host}}/user/{{userId}}"
       },
       "response": []
+    },
+    {
+      "name": "create",
+      "_postman_id": "136e554d-17c8-4e06-ac17-7311d7f8a33d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": ""
+      },
+      "response": []
     }
   ]
 }
