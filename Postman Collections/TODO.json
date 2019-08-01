@@ -431,7 +431,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n\"name\": \"Max Jobs\",\n\"owner\": \"max001\",\n\"location\": \"Boston\"\n}\n"
+          "raw": ""
         },
         "url": "{{host}}/group"
       },
