@@ -422,6 +422,11 @@
             "name": "Content-Type",
             "value": "application/json",
             "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
           }
         ],
         "body": {
