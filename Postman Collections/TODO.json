@@ -431,7 +431,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": ""
+          "raw": "{\n\"name\":\"Bob Samuel\",\n\"accessType\":\"all\",\n\"description\":\"Postman\",\n\"owner\":\"5d4270e7697b3000048b469b\"\n}\n"
         },
         "url": "{{host}}/group"
       },
