@@ -502,6 +502,35 @@
         "url": "{{host}}/group/{{groupId}}"
       },
       "response": []
+    },
+    {
+      "name": "getById Copy",
+      "_postman_id": "c028b9dd-b9a9-4d27-b4db-640b0e837151",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": "{{host}}/group/{{groupId}}"
+      },
+      "response": []
     }
   ]
 }
