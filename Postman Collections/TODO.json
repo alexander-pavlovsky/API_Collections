@@ -504,29 +504,29 @@
       "response": []
     },
     {
-      "name": "getById Copy",
+      "name": "updateById",
       "_postman_id": "c028b9dd-b9a9-4d27-b4db-640b0e837151",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
       "request": {
-        "method": "GET",
+        "method": "PATCH",
         "header": [
           {
             "key": "Content-Type",
             "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
+            "type": "text",
+            "value": "application/json"
           },
           {
             "key": "Authorization",
-            "value": "{{token}}",
-            "type": "text"
+            "type": "text",
+            "value": "{{token}}"
           }
         ],
         "body": {
           "mode": "raw",
-          "raw": ""
+          "raw": "{\n    \"name\": \"PavelGroupINC\",\n    \"accessType\": \"all\",\n    \"description\": \"PostmanXXX\",\n    \"owner\": \"5d44e070278c0d00047d2884\"\n}"
         },
         "url": "{{host}}/group/{{groupId}}"
       },
