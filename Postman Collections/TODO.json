@@ -568,7 +568,7 @@
         "disableBodyPruning": true
       },
       "request": {
-        "method": "POST",
+        "method": "GET",
         "header": [
           {
             "key": "Content-Type",
@@ -580,6 +580,11 @@
             "key": "Authorization",
             "type": "text",
             "value": "{{token}}"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{eventId}}",
+            "type": "text"
           }
         ],
         "body": {
