@@ -517,7 +517,7 @@
       "request": {
         "method": "DELETE",
         "header": [],
-        "url": ""
+        "url": "{{host}}/group/{{eventId}"
       },
       "response": []
     }
