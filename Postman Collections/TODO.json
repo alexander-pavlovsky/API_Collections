@@ -507,40 +507,6 @@
         "url": "{{host}}/group/{{eventId}"
       },
       "response": []
-    },
-    {
-      "name": "deleteGroup",
-      "_postman_id": "61cc36d1-534c-49e1-a258-cb00df3a6575",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "DELETE",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "{{token}}",
-            "type": "text"
-          },
-          {
-            "key": "Authorization",
-            "value": "{{eventId}}",
-            "type": "text"
-          },
-          {
-            "key": "Content-Type",
-            "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": ""
-        },
-        "url": "{{host}}/group/{{eventId}"
-      },
-      "response": []
     }
   ]
 }
