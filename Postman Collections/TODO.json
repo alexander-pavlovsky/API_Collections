@@ -531,6 +531,19 @@
         "url": "{{host}}/group/{{groupId}}"
       },
       "response": []
+    },
+    {
+      "name": "eventCreate",
+      "_postman_id": "82aa48a9-78d7-4e46-962a-17b670d6d631",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": ""
+      },
+      "response": []
     }
   ]
 }
