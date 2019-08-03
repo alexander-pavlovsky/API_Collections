@@ -458,8 +458,27 @@
       },
       "request": {
         "method": "GET",
-        "header": [],
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
         "url": "{{host}}/group"
+      },
+      "response": []
+    },
+    {
+      "name": "getById",
+      "_postman_id": "bfafd8bd-6863-4ad7-8d78-47fe01c16285",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": ""
       },
       "response": []
     }
