@@ -417,10 +417,7 @@
             "id": "24315dd7-9104-45a6-8b78-3676792217fb",
             "exec": [
               "",
-              "",
-              "pm.test(\"Message is string\", () => {",
-              "    pm.expect(jsonData.message).to.be.a(\"string\");",
-              "});"
+              ""
             ],
             "type": "text/javascript"
           }
