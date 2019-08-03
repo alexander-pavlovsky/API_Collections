@@ -436,6 +436,19 @@
         "url": "{{host}}/group"
       },
       "response": []
+    },
+    {
+      "name": "getall",
+      "_postman_id": "5f107d96-42cd-480c-aef9-1677139d9832",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": ""
+      },
+      "response": []
     }
   ]
 }
