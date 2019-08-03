@@ -670,7 +670,7 @@
         "disableBodyPruning": true
       },
       "request": {
-        "method": "PATCH",
+        "method": "DELETE",
         "header": [
           {
             "key": "Content-Type",
