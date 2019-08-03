@@ -584,7 +584,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"name\": \"PavelGroupINC\",\n    \"accessType\": \"all\",\n    \"description\": \"Postman\",\n    \"location\": \"USA\",\n    \"owner\": \"5d44e070278c0d00047d2884\"\n}"
+          "raw": ""
         },
         "url": "{{host}}/event"
       },
