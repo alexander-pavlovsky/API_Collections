@@ -562,7 +562,7 @@
       "response": []
     },
     {
-      "name": "eventCreate Copy",
+      "name": "eventGetAll",
       "_postman_id": "fa3a5fec-7d78-4023-8d9f-6e97cf6d21fd",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -573,20 +573,20 @@
           {
             "key": "Content-Type",
             "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
+            "type": "text",
+            "value": "application/json"
           },
           {
             "key": "Authorization",
-            "value": "{{token}}",
-            "type": "text"
+            "type": "text",
+            "value": "{{token}}"
           }
         ],
         "body": {
           "mode": "raw",
           "raw": "{\n    \"name\": \"PavelGroupINC\",\n    \"accessType\": \"all\",\n    \"description\": \"Postman\",\n    \"location\": \"USA\",\n    \"owner\": \"5d44e070278c0d00047d2884\"\n}"
         },
-        "url": "{{host}}/event/create"
+        "url": "{{host}}/event"
       },
       "response": []
     }
