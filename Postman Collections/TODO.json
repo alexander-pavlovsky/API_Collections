@@ -484,11 +484,6 @@
         "method": "GET",
         "header": [
           {
-            "key": "Authorization",
-            "value": "{{eventId}}",
-            "type": "text"
-          },
-          {
             "key": "Content-Type",
             "name": "Content-Type",
             "value": "application/json",
