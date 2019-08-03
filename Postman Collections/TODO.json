@@ -560,6 +560,35 @@
         "url": "{{host}}/event/create"
       },
       "response": []
+    },
+    {
+      "name": "eventCreate Copy",
+      "_postman_id": "fa3a5fec-7d78-4023-8d9f-6e97cf6d21fd",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"PavelGroupINC\",\n    \"accessType\": \"all\",\n    \"description\": \"Postman\",\n    \"location\": \"USA\",\n    \"owner\": \"5d44e070278c0d00047d2884\"\n}"
+        },
+        "url": "{{host}}/event/create"
+      },
+      "response": []
     }
   ]
 }
