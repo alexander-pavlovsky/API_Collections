@@ -617,15 +617,15 @@
           },
           {
             "key": "Authorization",
-            "value": "{{eventId}}",
-            "type": "text"
+            "type": "text",
+            "value": "{{eventId}}"
           }
         ],
         "body": {
           "mode": "raw",
           "raw": ""
         },
-        "url": "{{host}}/event"
+        "url": "{{host}}/event/{{eventId}}"
       },
       "response": []
     }
