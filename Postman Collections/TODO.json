@@ -662,6 +662,40 @@
         "url": "{{host}}/event/{{eventId}}"
       },
       "response": []
+    },
+    {
+      "name": "eventUpdate Copy",
+      "_postman_id": "f8abc644-49c3-4ca0-bd0b-42efbb90ed21",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "type": "text",
+            "value": "{{token}}"
+          },
+          {
+            "key": "Authorization",
+            "type": "text",
+            "value": "{{eventId}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"PavelGroupINC\",\n    \"accessType\": \"all-USA\",\n    \"description\": \"Postman\",\n    \"location\": \"USA\",\n    \"owner\": \"5d44e070278c0d00047d2884\"\n}"
+        },
+        "url": "{{host}}/event/{{eventId}}"
+      },
+      "response": []
     }
   ]
 }
