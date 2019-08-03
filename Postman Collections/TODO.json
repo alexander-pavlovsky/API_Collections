@@ -444,7 +444,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"name\": \"Bob Samuel\",\n    \"accessType\": \"all\",\n    \"description\": \"Postman\",\n    \"owner\": \"5d4270e7697b3000048b469b\"\n}"
+          "raw": "{\n    \"name\": \"PavelGroupLLC\",\n    \"accessType\": \"all\",\n    \"description\": \"Postman\",\n    \"owner\": \"5d4270e7697b3000048b469b\"\n}"
         },
         "url": "{{host}}/group"
       },
@@ -466,7 +466,7 @@
           },
           {
             "key": "Authorization",
-            "value": "{{userId}}",
+            "value": "{{eventId}}",
             "type": "text"
           }
         ],
@@ -516,7 +516,28 @@
       },
       "request": {
         "method": "DELETE",
-        "header": [],
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{eventId}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
         "url": "{{host}}/group/{{eventId}"
       },
       "response": []
