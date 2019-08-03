@@ -410,6 +410,22 @@
     },
     {
       "name": "create",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "24315dd7-9104-45a6-8b78-3676792217fb",
+            "exec": [
+              "",
+              "",
+              "pm.test(\"Message is string\", () => {",
+              "    pm.expect(jsonData.message).to.be.a(\"string\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "_postman_id": "136e554d-17c8-4e06-ac17-7311d7f8a33d",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -431,7 +447,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n\"name\":\"Bob Samuel\",\n\"accessType\":\"all\",\n\"description\":\"Postman\",\n\"owner\":\"5d4270e7697b3000048b469b\"\n}\n"
+          "raw": "{\n    \"name\": \"Bob Samuel\",\n    \"accessType\": \"all\",\n    \"description\": \"Postman\",\n    \"owner\": \"5d4270e7697b3000048b469b\"\n}"
         },
         "url": "{{host}}/group"
       },
