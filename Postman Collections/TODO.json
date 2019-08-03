@@ -594,6 +594,40 @@
         "url": "{{host}}/event"
       },
       "response": []
+    },
+    {
+      "name": "eventGetByID",
+      "_postman_id": "4186a1fe-6fb8-4666-9450-7344e636b994",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "type": "text",
+            "value": "{{token}}"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{eventId}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": "{{host}}/event"
+      },
+      "response": []
     }
   ]
 }
