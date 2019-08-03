@@ -478,7 +478,7 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": ""
+        "url": "{{host}}/group/{{groupId}"
       },
       "response": []
     }
