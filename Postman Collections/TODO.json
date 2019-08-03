@@ -499,7 +499,7 @@
           "mode": "raw",
           "raw": ""
         },
-        "url": "{{host}}/group/{{eventId}"
+        "url": "{{host}}/group/{{groupId}}"
       },
       "response": []
     }
