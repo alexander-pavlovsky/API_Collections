@@ -463,6 +463,11 @@
             "key": "Authorization",
             "value": "{{token}}",
             "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{userId}}",
+            "type": "text"
           }
         ],
         "url": "{{host}}/group"
