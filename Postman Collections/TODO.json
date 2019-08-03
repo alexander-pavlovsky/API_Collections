@@ -490,11 +490,21 @@
           },
           {
             "key": "Authorization",
-            "value": "{{userId}}",
+            "value": "{{eventId}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
             "type": "text"
           }
         ],
-        "url": "{{host}}/group/{{groupId}"
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": "{{host}}/group/{{eventId}"
       },
       "response": []
     }
