@@ -630,7 +630,7 @@
       "response": []
     },
     {
-      "name": "eventGetByID Copy",
+      "name": "eventUpdate",
       "_postman_id": "8e7e498e-5114-4989-bf49-303825d6cc32",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
