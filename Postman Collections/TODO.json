@@ -539,9 +539,25 @@
         "disableBodyPruning": true
       },
       "request": {
-        "method": "GET",
-        "header": [],
-        "url": ""
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": "{{host}}/event/create"
       },
       "response": []
     }
