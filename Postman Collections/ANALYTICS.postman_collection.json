@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "657b4978-3e2a-4f1a-a378-9c893234bada",
+		"name": "ANALYTICS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAnalytics",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/analytics/5d5c9105a65dcb003818c7f1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"analytics",
+						"5d5c9105a65dcb003818c7f1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
