@@ -15,6 +15,9 @@
 						"exec": [
 							"const jsonData = pm.response.json();",
 							"",
+							"pm.environment.set(\"userEmail\", \"martin.shultz\"+ new Date().getTime() + \"@test.com\");",
+							"pm.environment.set(\"userPassword\", \"ab47sr6c8x9znz\");",
+							"",
 							"pm.test(\"Status\", function() {",
 							"    pm.response.to.have.status(201);",
 							"});",
@@ -23,9 +26,9 @@
 							"    pm.expect(jsonData.success).to.equal(true);",
 							"});",
 							"",
-							"/*pm.test(\"Fail is false\", () => {",
+							"pm.test(\"Fail is false\", () => {",
 							"    pm.expect(jsonData.fail).to.eql(false);",
-							"}); */",
+							"}); ",
 							"",
 							"pm.test(\"Message is string\", () => {",
 							"    pm.expect(jsonData.message).to.be.a(\"string\");",
@@ -52,8 +55,7 @@
 					"script": {
 						"id": "c53d4b2f-3188-4084-835d-56cffd92c48a",
 						"exec": [
-							"pm.environment.set(\"userEmail\", \"bob.smith\"+ new Date().getTime() + \"@gmail.com\");",
-							"pm.environment.set(\"userPassword\", \"ab47sr6c8x9znz\");"
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -65,8 +67,8 @@
 					{
 						"key": "Content-Type",
 						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+						"type": "text",
+						"value": "application/json"
 					}
 				],
 				"body": {
@@ -94,13 +96,13 @@
 					"script": {
 						"id": "70a11c68-d201-4fe8-972b-f1f292c4793a",
 						"exec": [
-							"const jsonData = pm.response.json();",
+							"",
 							"",
 							"pm.environment.set(\"token\", jsonData.payload.token);",
 							"",
 							"pm.environment.set(\"userId\", jsonData.payload.user._id);",
 							"",
-							"",
+							"/*const jsonData = pm.response.json();",
 							"",
 							"",
 							"pm.test(\"Status\", function() {",
@@ -120,8 +122,25 @@
 							"    pm.expect(pm.response.responseTime).to.be.below(5000);",
 							"});",
 							"",
+							"*/",
+							"",
+							"​",
 							"",
 							"",
+							"",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b41045a3-193c-4e76-8989-9743cfa36ece",
+						"exec": [
 							""
 						],
 						"type": "text/javascript"
@@ -443,7 +462,7 @@
 			"response": []
 		},
 		{
-			"name": "create",
+			"name": "create Group",
 			"event": [
 				{
 					"listen": "test",
@@ -489,7 +508,7 @@
 			"response": []
 		},
 		{
-			"name": "getall",
+			"name": "getall Gropus",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -601,7 +620,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"PavelGroupINC\",\n    \"accessType\": \"all\",\n    \"description\": \"Postman\",\n    \"location\": \"USA\",\n    \"owner\": \"5d44e070278c0d00047d2884\"\n}"
+					"raw": "{\n    \"name\": \"MartinShulthzLLC\",\n    \"accessType\": \"all\",\n    \"description\": \"Postman\",\n    \"location\": \"USA\",\n    \"owner\": \"5d44e070278c0d00047d2884\"\n}"
 				},
 				"url": {
 					"raw": "{{host}}/event/create",
@@ -679,7 +698,8 @@
 					{
 						"key": "Authorization",
 						"type": "text",
-						"value": "{{eventId}}"
+						"value": "{{eventId}}",
+						"disabled": true
 					}
 				],
 				"body": {
